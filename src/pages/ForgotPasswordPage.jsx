@@ -5,9 +5,22 @@ const ForgotPassword = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     
-    const handleLoginClick = () => {
-        navigate("/login");
-    };
+    const handlePasswordReset = async () => {
+        try {
+            const response = await fetch("http://localhost:5000/api/auth/forgot-password", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email }),
+            });
+            const data = await response.json();
+            console.log(data);
+            navigate("/login");
+        } catch (error) {
+            console.error("Password reset failed:", error);
+        }
+    }
     return (
         <div className=" container d-flex flex-column align-items-center justify-content-center text-black py-5">
         <div className="container p-5 border border-2 rounded rounded-3 w-75">
@@ -35,7 +48,7 @@ const ForgotPassword = () => {
                 <button
                 type="button"
                 className="btn btn-dark mt-3"
-                onClick={handleLoginClick}
+                onClick={handlePasswordReset}
                 >
                 Send
                 </button>
