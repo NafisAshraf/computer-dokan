@@ -1,7 +1,7 @@
 import React from "react";
 import image1 from "../carouselImages/1711482554252wallpaperflare.com_wallpaper (2).jpg";
 import image2 from "../carouselImages/c2.webp";
-import image3 from "../carouselImages/images.jpeg";
+import image3 from "../carouselImages/c3.webp";
 
 const Carousel = () => {
   console.log("Carousel");

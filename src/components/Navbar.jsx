@@ -170,13 +170,20 @@ function Navbar() {
                   </button>
                 </div>
               ) : (
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  onClick={handleLoginClick}
-                >
-                  Login
-                </button>
+                <div>
+                  <button
+                    type="button"
+                    className="btn btn-primary me-3"
+                    onClick={handleLoginClick}
+                  >
+                    Login
+                  </button>
+                  <Link to={"/signup"}>
+                    <button type="button" className="btn btn-light">
+                      Sign Up
+                    </button>
+                  </Link>
+                </div>
               )}
             </div>
             {authUser ? (

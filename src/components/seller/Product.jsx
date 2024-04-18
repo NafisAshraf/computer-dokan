@@ -26,7 +26,6 @@ const Product = () => {
 
   const handleEdit = (product) => {
     setEditingId(product._id);
-    // Set temporary editable state to the values of the current product
     setEditable({
       name: product.product,
       price: product.price,
@@ -58,7 +57,6 @@ const Product = () => {
         }
       );
       alert("Product updated successfully");
-      // Reflect changes in the local state to avoid refetching
       setProducts(
         products.map((prod) =>
           prod._id === id
@@ -71,7 +69,7 @@ const Product = () => {
             : prod
         )
       );
-      setEditingId(null); // Exit editing mode
+      setEditingId(null);
     } catch (error) {
       console.error("Error updating product", error);
       alert("Failed to update product");

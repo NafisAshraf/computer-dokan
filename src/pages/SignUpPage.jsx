@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 // import { set } from "mongoose";
 
 const SignUp = () => {
@@ -123,7 +124,30 @@ const SignUp = () => {
             </div>
           </div>
         )}
-        <div className="bg-light d-flex align-items-center col-12 col-lg-6"></div>
+        <div className="bg-light d-flex align-items-center col-12 col-lg-6">
+          <div className=" container d-flex flex-column align-items-center justify-content-center text-black">
+            <div className="container p-5 border border-2 rounded rounded-3 w-75">
+              <h2>Already have an account?</h2>
+              <hr />
+              <p className="fs-5">
+                You may login instead, if you already have an account
+              </p>
+              <hr />
+              <h3 className="my-4">WHAT YOU'LL FIND IN ACCOUNT </h3>
+              <div className="container-fluid p-0 d-flex flex-column gap-3 fs-5">
+                <div>Access your order history</div>
+                <div>Manage your personal information</div>
+                <div>Register your wishlist</div>
+                <div className="d-flex justify-content-end px-3">
+                  <Link to={"/login"}></Link>
+                  <button type="button" className="btn btn-dark mt-3">
+                    Login
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ const ProductPageDashboard = ({ productID, product }) => {
   const sellerID = product.uploadedBy?._id;
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useContext(CartContext);
-  const protag = `https://9ffd-114-129-9-139.ngrok-free.app/product/${productID}`;
+  const protag = `https://e96f-118-179-57-155.ngrok-free.app/product/${productID}`;
   const navigate = useNavigate();
 
   useEffect(() => {

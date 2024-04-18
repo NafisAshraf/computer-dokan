@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Listing from "../components/Listing";
-import { useAuthContext } from "../context/AuthContext"; // adjust the path according to your project structure
+import { useAuthContext } from "../context/AuthContext";
 import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
 
